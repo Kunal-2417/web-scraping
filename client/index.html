@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+</head>
+<body>
+    <h1>Our Products</h1>
+    
+    <input class="channel-input" type="text" placeholder="Search Product"/>
+    <button class="add-channel" onclick="submitChannel()">Search</button>
+    <h4>Dental Stall</h4>
+    <div class="container"></div>
+
+    <h4>PinkBlue</h4>
+    <div class="container2"></div>
+   
+    <h4>Libral Trader</h4>
+    <div class="container3"></div>
+
+    <h4>Medika Bazar</h4>
+    <div class="container4"></div>
+
+    <h4>Daantwale</h4>
+    <div class="container5"></div>
+    
+    <h4>Dental World</h4>
+    <div class="container6"></div>
+
+    <h4>Amplemeds</h4>
+    <div class="container7"></div>
+
+    <h4>My Dental stock</h4>
+    <div class="container8"></div>
+
+    <h4>Greenguava</h4>
+    <div class="container9"></div>
+
+    <h4>The dental dealer</h4>
+    <div class="container10"></div>
+
+    <h4>Dentaltix</h4>
+    <div class="container11"></div>
+
+    <h4>Dental Pord</h4>
+    <div class="container12"></div>
+
+    <h4>DentalBasket</h4>
+    <div class="container13"></div>
+    <script>
+        //const resultDiv = document.querySelector('.container');
+        const submitChannel=async()=>{
+            const ProductInput=document.querySelector('.channel-input');
+            const product=ProductInput.value;
+            
+            const res2 = await fetch('http://localhost:3001/creator2', {
+                method: 'POST',
+                body: JSON.stringify({ product }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data2 = await res2.json();
+            const ctr2 = document.querySelector('.container2');
+            data2.Data2.list2.forEach(creator => {
+                const card = newEl('div', { class: 'card' });
+                const img = newEl('img', { src: creator.image });
+                const name = newEl('h3', { innerText: creator.name });
+                const price = newEl('h4', { innerText: creator.price })
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(price);
+                ctr2.appendChild(card);
+            })
+            const res3 = await fetch('http://localhost:3001/creator3', {
+                method: 'POST',
+                body: JSON.stringify({ product }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data3 = await res3.json();
+            const ctr3 = document.querySelector('.container3');
+            data3.Data3.list3.forEach(creator => {
+                const card = newEl('div', { class: 'card' });
+                const img = newEl('img', { src: creator.image });
+                const name = newEl('h3', { innerText: creator.name });
+                const price = newEl('h4', { innerText: creator.price })
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(price);
+                ctr3.appendChild(card);
+            })
+            const res4 = await fetch('http://localhost:3001/creator4', {
+                method: 'POST',
+                body: JSON.stringify({ product }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data4 = await res4.json();
+            const ctr4 = document.querySelector('.container4');
+            data4.Data4.list4.forEach(creator => {
+                const card = newEl('div', { class: 'card' });
+                const img = newEl('img', { src: creator.image });
+                const name = newEl('h3', { innerText: creator.name });
+                const price = newEl('h4', { innerText: creator.price })
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(price);
+                ctr4.appendChild(card);
+            })
+            const res5 = await fetch('http://localhost:3001/creator5', {
+                method: 'POST',
+                body: JSON.stringify({ product }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data5 = await res5.json();
+            const ctr5 = document.querySelector('.container5');
+            data5.Data5.list5.forEach(creator => {
+                const card = newEl('div', { class: 'card' });
+                const img = newEl('img', { src: creator.image });
+                const name = newEl('h3', { innerText: creator.name });
+                const price = newEl('h4', { innerText: creator.price })
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(price);
+                ctr5.appendChild(card);
+            })
+            const res6 = await fetch('http://localhost:3001/creator6', {
+                method: 'POST',
+                body: JSON.stringify({ product }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data6 = await res6.json();
+            const ctr6 = document.querySelector('.container6');
+            data6.Data6.list6.forEach(creator => {
+                const card = newEl('div', { class: 'card' });
+                const img = newEl('img', { src: creator.image });
+                const name = newEl('h3', { innerText: creator.name });
+                const price = newEl('h4', { innerText: creator.price })
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(price);
+                ctr6.appendChild(card);
+            })
+            const res7 = await fetch('http://localhost:3001/creator7', {
+                method: 'POST',
+                body: JSON.stringify({ product }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data7 = await res7.json();
+            const ctr7 = document.querySelector('.container7');
+            data7.Data7.list7.forEach(creator => {
+                const card = newEl('div', { class: 'card' });
+                const img = newEl('img', { src: creator.image });
+                const name = newEl('h3', { innerText: creator.name });
+                const price = newEl('h4', { innerText: creator.price })
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(price);
+                ctr7.appendChild(card);
+            })
+            const res8 = await fetch('http://localhost:3001/creator8', {
+                method: 'POST',
+                body: JSON.stringify({ product }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data8 = await res8.json();
+            const ctr8 = document.querySelector('.container8');
+            data8.Data8.list8.forEach(creator => {
+                const card = newEl('div', { class: 'card' });
+                const img = newEl('img', { src: creator.image });
+                const name = newEl('h3', { innerText: creator.name });
+                const price = newEl('h4', { innerText: creator.price })
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(price);
+                ctr8.appendChild(card);
+            })
+            const res9 = await fetch('http://localhost:3001/creator9', {
+                method: 'POST',
+                body: JSON.stringify({ product }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data9 = await res9.json();
+            const ctr9 = document.querySelector('.container9');
+            data9.Data9.list9.forEach(creator => {
+                const card = newEl('div', { class: 'card' });
+                const img = newEl('img', { src: creator.image });
+                const name = newEl('h3', { innerText: creator.name });
+                const price = newEl('h4', { innerText: creator.price })
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(price);
+                ctr9.appendChild(card);
+            })
+            const res10 = await fetch('http://localhost:3001/creator10', {
+                method: 'POST',
+                body: JSON.stringify({ product }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data10 = await res10.json();
+            const ctr10 = document.querySelector('.container10');
+            data10.Data10.list10.forEach(creator => {
+                const card = newEl('div', { class: 'card' });
+                const img = newEl('img', { src: creator.image });
+                const name = newEl('h3', { innerText: creator.name });
+                const price = newEl('h4', { innerText: creator.price })
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(price);
+                ctr10.appendChild(card);
+            })
+            const res11 = await fetch('http://localhost:3001/creator11', {
+                method: 'POST',
+                body: JSON.stringify({ product }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data11 = await res11.json();
+            const ctr11 = document.querySelector('.container11');
+            data11.Data11.list11.forEach(creator => {
+                const card = newEl('div', { class: 'card' });
+                const img = newEl('img', { src: creator.image });
+                const name=newEl('h3',{innerText:creator.name});
+                const price=newEl('h4',{innerText:creator.price})
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(price);
+                ctr11.appendChild(card);
+            })
+
+            //const ctr12 = document.querySelector('.container12');
+            //data.Data12.list12.forEach(creator => {
+            //    const card = newEl('div', { class: 'card' });
+            //    const img = newEl('img', { src: creator.image });
+            //   const name=newEl('h3',{innerText:creator.name});
+            //   const price=newEl('h4',{innerText:creator.price})
+            //    card.appendChild(img);
+            //    card.appendChild(name);
+            //   card.appendChild(price);
+            //    ctr12.appendChild(card);
+            //})
+
+           /* const ctr13 = document.querySelector('.container13');
+            data.Data13.list13.forEach(creator => {
+                const card = newEl('div', { class: 'card' });
+                const img = newEl('img', { src: creator.image });
+               const name=newEl('h3',{innerText:creator.name});
+               const price=newEl('h4',{innerText:creator.price})
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(price);
+                ctr13.appendChild(card);
+            })*/
+
+        }
+
+        function newEl(type,attrs={}){
+            const el=document.createElement(type);
+            for(let attr in attrs){
+                const values=attrs[attr];
+                if(attr=='innerText') el.innerText=values;
+                else el.setAttribute(attr,values);
+            }
+            return el;
+        }
+
+    </script>
+
+    <style>
+        .container{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .container2{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .container3{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .container4{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .container5{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .container6{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .container7{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .container8{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .container9{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .container10{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .container11{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .container12{
+            margin-top: 30px;
+            display: flex;
+            background-color: rgb(231, 159, 243);
+        }
+        .card{
+            margin: 20px;
+            padding: 20px;
+            background-color: rgb(211, 184, 240);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+
+        }
+        .h4{
+            color: rgb(255, 0, 0);
+            background-color: aquamarine;
+        }
+    </style>
+</body>
+</html>
